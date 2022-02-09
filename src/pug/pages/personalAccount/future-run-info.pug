@@ -1,0 +1,33 @@
+include ../../includes/header
+include ../../includes/nav-menu
+include ../../includes/run-info-link
+include ../../utils/future-run-member
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        title Майбутній забіг
+    body.future-run-info
+        .future-run-info__scroll
+            + header('img', './future-runs.html')
+            main.main.container
+                p.main__description
+                    | Марафон — найбільша дистанція в місті Львів.
+                    | Подолавши її ти розумієш, що здатен на більше, ніж здається!
+                    | Ми в тебе віримо, долучайся до нас!
+                .main__link-box
+                    + run-info-link('regulations')
+                    + run-info-link('distance path')
+                    + run-info-link('timetable')
+                    + run-info-link('start protocol')
+                    + run-info-link('finish protocol')
+                .main__member-box
+                    p.main__member-title Учасники:
+                    .main__member-item-box
+                        + future-run-member('Маргарита Совкова', '210685')
+                        + future-run-member('Андрій Сквота', '210686')
+                        + future-run-member('Віктор Сквота', '210687')
+        footer.footer
+            + nav-menu('qr')

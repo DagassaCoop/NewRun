@@ -3,14 +3,21 @@
 
 @import 'pages/start-nav';
 @import "pages/personalAccount/personal-account";
-@import "pages/personalAccount/personal-completed-runs";
-@import "pages/personalAccount/run-results";
-@import "pages/personalAccount/run-person-result";
+@import "pages/personalAccount/completed-runs";
+@import "pages/personalAccount/completed-run-results";
+@import "pages/personalAccount/completed-run-person-result";
+@import "pages/personalAccount/future-runs";
+@import "pages/personalAccount/future-run-info";
+@import "pages/personalAccount/wish-runs";
+@import "pages/personalAccount/wish-run-info";
 
 @import "components/header";
 @import 'components/nav-menu';
 @import "components/run-info";
 @import "components/run-result";
+@import "components/run-info-link";
+@import "components/future-run-member";
+@import "components/button";
 
 body {
   height: 100vh;

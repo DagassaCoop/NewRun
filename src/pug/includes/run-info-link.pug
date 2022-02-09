@@ -1,0 +1,30 @@
+mixin run-info-link(type)
+    case type
+        when 'regulations'
+            - classes= 'regulations'
+            - text= 'Регламент'
+            - url = ''
+        when 'distance path'
+            - classes= 'distance-path'
+            - text= 'Маршрут дистанції'
+            - url = ''
+        when 'timetable'
+            - classes= 'timetable'
+            - text= 'Розклад та призова сітка'
+            - url = ''
+        when 'start protocol'
+            - classes= 'start-protocol'
+            - text= 'Стартовий протокол'
+            - url = ''
+        when 'finish protocol'
+            - classes= 'finish-protocol'
+            - text= 'Фінішний протокол'
+            - url = ''
+        when 'wish list'
+            - classes= 'wish-list'
+            - text= 'Додати до листа бажань'
+            - url = ''
+    .run-info-link
+        a.run-info-link__logo-box(href= url)
+            .run-info-link__logo(class=`run-info-link__logo_${classes}`)
+        p.run-info-link__text= text

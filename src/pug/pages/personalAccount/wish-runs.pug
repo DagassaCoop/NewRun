@@ -1,0 +1,23 @@
+include ../../includes/header
+include ../../includes/nav-menu
+include ../../utils/wish-run
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        title Мої побажання
+    body.wish-runs
+        + header('one title', './personal-account.html', 'Мої побажання')
+        main.main
+            .container
+                .main__info
+                    .main__info-date Сьогодні 11 листопада
+                .main__content
+                    + wish-run('Львів', '05.09.2021', 'Poltava Nova poshta halfmarathon')
+                    + wish-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon')
+                    + wish-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon')
+                    + wish-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon')
+        footer.footer
+            + nav-menu('home')

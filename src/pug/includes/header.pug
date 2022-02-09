@@ -23,3 +23,13 @@ mixin header(type, url, title, secondTitle, distance)
                     h1.header__title-main= title
                 + run-result('person', '35', '01:24:31', '21065', 'Маргарита Захаржевська', 'жін', '1993')
                 .header__run-distance= distance
+        when 'img'
+            header.header.header_img
+                .container
+                    a.header__back-link(href= url)
+                .header__run-info
+                    p.header__run-info-title Три медведя эстафета 10 км
+                    p.header__run-info-description Lviv Nova Poshta Marathon
+                    p.header__run-info-date 7.11.2022 р.
+                    p.header__run-info-start 09:00
+                    p.header__run-info-location Вул. Городоцька 10

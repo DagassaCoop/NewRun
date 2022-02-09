@@ -1,0 +1,18 @@
+.button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 15px 0;
+  border-radius: 150px;
+  font-family: "SF Pro Display", sans-serif;
+
+  &.white {
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  &.red {
+    color: #ffffff;
+    background-color: #E20020;
+  }
+}

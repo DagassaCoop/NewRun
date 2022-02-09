@@ -1,0 +1,23 @@
+include ../../includes/header
+include ../../includes/nav-menu
+include ../../utils/future-run
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        title Майбутні забіги
+    body.future-runs
+        + header('one title', './personal-account.html', 'Реєстрації на майбутні забіги')
+        main.main
+            .container
+                .main__info
+                    .main__info-date Сьогодні 11 листопада
+                .main__content
+                    + future-run('Львів', '05.09.2021', 'Poltava Nova poshta halfmarathon', 'Три медведя эстафета 10 км')
+                    + future-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon', '42 км')
+                    + future-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon', '42 км')
+                    + future-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon', '42 км')
+        footer.footer
+            + nav-menu('home')

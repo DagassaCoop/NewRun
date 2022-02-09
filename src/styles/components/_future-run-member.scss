@@ -1,0 +1,18 @@
+.future-run-member {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #C1C7D0;
+  align-items: baseline;
+
+  &__fio {
+    font-size: 14px;
+    line-height: 17px;
+    height: max-content;
+  }
+
+  &__number {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}

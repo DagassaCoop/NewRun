@@ -2,7 +2,7 @@ include ../../includes/header
 include ../../includes/nav-menu
 include ../../utils/completed-run
 include ../../utils/future-run
-include ../../utils/desired-run
+include ../../utils/wish-run
 doctype
 html
     head
@@ -11,33 +11,34 @@ html
         meta(http-equiv='X-UA-Compatible' content='ie=edge')
         title Personal Account
     body.personal-account
-        + header('arrow', '../main.html')
-        section.personal-account__account.container(style="margin-top: 40px; margin-bottom: 40px")
-            .personal-account__account-img-box
-                .personal-account__account-img
-            .personal-account__account-content
-                .personal-account__account-content-fio Маргарита Захаржевська
-                .personal-account__account-content-date 20.05.1993
-                .personal-account__account-content-edit
-                    p.personal-account__account-content-edit-text Редагувати особисті данні
-                    .personal-account__account-content-edit-img
-        main.main
-            .container
-                .main__content
-                    .main__content-link
-                        a.main__content-link-text(href='./personal-completed-runs.html') Минулі забіги
-                        a.main__content-link-img(href='./personal-completed-runs.html')
-                    .main__content-completed-run-box
-                        + completed-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon', '42 км', '09:20:06')
-                    .main__content-link
-                        a.main__content-link-text(href='') Реєстрація на майбутні забіги
-                        a.main__content-link-img(href='')
-                    .main__content-future-run-box
-                        + future-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon', '42 км')
-                    .main__content-link
-                        a.main__content-link-text(href='') Мої побажання
-                        a.main__content-link-img(href='')
-                    .main__content-wants-run-box
-                        + desired-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon')
+        .personal-account__scroll
+            + header('arrow', '../main.html')
+            section.personal-account__account.container(style="margin-top: 40px; margin-bottom: 40px")
+                .personal-account__account-img-box
+                    .personal-account__account-img
+                .personal-account__account-content
+                    .personal-account__account-content-fio Маргарита Захаржевська
+                    .personal-account__account-content-date 20.05.1993
+                    .personal-account__account-content-edit
+                        p.personal-account__account-content-edit-text Редагувати особисті данні
+                        .personal-account__account-content-edit-img
+            main.main
+                .container
+                    .main__content
+                        .main__content-link
+                            a.main__content-link-text(href='./completed-runs.html') Минулі забіги
+                            a.main__content-link-img(href='./completed-runs.html')
+                        .main__content-completed-run-box
+                            + completed-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon', '42 км', '09:20:06')
+                        .main__content-link
+                            a.main__content-link-text(href='./future-runs.html') Реєстрація на майбутні забіги
+                            a.main__content-link-img(href='./future-runs.html')
+                        .main__content-future-run-box
+                            + future-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon', '42 км')
+                        .main__content-link
+                            a.main__content-link-text(href='./wish-runs.html') Мої побажання
+                            a.main__content-link-img(href='./wish-runs.html')
+                        .main__content-wants-run-box
+                            + wish-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon')
         footer.footer
             + nav-menu('account')
