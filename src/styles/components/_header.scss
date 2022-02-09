@@ -8,7 +8,8 @@
     height: 24px;
     margin: 20px 0 10px;
     background-image: url(@/assets/arrow-back-link.png);
-
+    position: relative;
+    z-index: 1;
 
   }
 
@@ -41,7 +42,6 @@
     right: -15px;
     background-color: rgba(246, 62, 64, 1);
     border-radius: 10px 0px 0px 0px;
-    z-index: -1;
 
     color: #ffffff;
     font-weight: 700;
@@ -108,7 +108,6 @@
       &-section {
         margin-top: -30px;
         position: relative;
-        z-index: -1;
       }
       &-main {
         margin-bottom: 25px;

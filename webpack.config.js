@@ -27,19 +27,19 @@ module.exports = {
         }
     },
     devServer: {
-        historyApiFallback: {
-            rewrites: [
-                {
-                    from: /./, to: '/main.html'
-                }
-            ]
-        },
+        // historyApiFallback: {
+        //     rewrites: [
+        //         {
+        //             from: /./, to: '/main.html'
+        //         }
+        //     ]
+        // },
         port: 4200
     },
     plugins: [
         new HtmlWebpackPlugin(
             {
-                filename: "main.html",
+                filename: "index.html",
                 template: "pug/pages/index.pug",
                 inject: true,
                 minify: false

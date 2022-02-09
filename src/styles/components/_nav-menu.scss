@@ -35,11 +35,13 @@
     &-content {
       width: 20%;
       margin: auto;
+      position: relative;
 
       &-img{
         width: 20px;
         height: 20px;
         background-size: cover;
+        position: relative;
       }
 
       &-active {
