@@ -1,0 +1,10 @@
+include ../utils/nav-menu__element
+
+mixin nav-menu (activeElement)
+    .nav-menu
+        each val in ['home', 'settings', 'account', 'qr']
+            if activeElement === val
+                - activeStatus= true
+            else
+                - activeStatus= false
+            + nav-menu-element(val, activeStatus)

@@ -1,0 +1,81 @@
+.header {
+  width: calc(100% - 30px);
+  position: relative;
+  &__back-link {
+    display: block;
+    background-size: cover;
+    background-image: url(@/assets/arrow-back-link.png);
+    width: 16.5px;
+    height: 14px;
+    margin: 20px 0 10px;
+  }
+
+  &__title {
+    &-section {
+      width: 100%;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    &-main {
+      font-weight: normal;
+      font-size: 26px;
+      line-height: 31px;
+    }
+
+    &-second {
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 24px;
+      width: 70%;
+      margin: auto;
+    }
+  }
+
+  &__run-distance {
+    position: absolute;
+    padding: 10px 15px 42px 42px;
+    bottom: -30px;
+    right: -15px;
+    background-color: rgba(246, 62, 64, 1);
+    border-radius: 10px 0px 0px 0px;
+    z-index: -1;
+
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &_arrow {
+    height: 35px;
+  }
+
+  &_one-title {
+    height: 110px;
+  }
+
+  &_two-titles {
+    height: 190px;
+    .header__title {
+      &-section {
+        margin-top: -30px;
+        position: relative;
+        z-index: -1;
+      }
+      &-main {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &_person-result {
+    height: 270px;
+    .header__title {
+      &-section {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,24 @@
+include ../../includes/header
+include ../../includes/nav-menu
+include ../../utils/run-result
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        title Personal Completed Runs
+    body.run-results
+        + header('two titles', './personal-completed-runs.html', 'Результати забігу', 'Lviv Nova Poshta Marathon', 'Три медведя эстафета 10 км')
+        main.main
+            .container
+                .main__results
+                    + run-result('', '35', '01:24:31', '21065', 'Маргарита Захаржевська', 'жін', '1993')
+                    + run-result('', '2', '01:24:31', '21065', 'Сергій Краматорський', 'чол', '1993')
+                    + run-result('', '3', '01:24:31', '21065', 'Анатолій Захаржевський', 'чол', '1993')
+                    + run-result('', '42', '01:24:31', '21065', 'Мухрітдін Мухрітдінович', 'чол', '1993')
+                    + run-result('', '659', '01:24:31', '21065', 'Святослав Довгопрізвиськович', 'чол', '1993')
+                    + run-result('', '456', '01:24:31', '21065', 'Мухрітдін Мухрітдінович', 'чол', '1993')
+
+        footer.footer
+            + nav-menu('qr')

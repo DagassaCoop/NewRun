@@ -1,0 +1,25 @@
+include ../utils/run-result
+mixin header(type, url, title, secondTitle, distance)
+    case type
+        when 'arrow'
+            header.header.header_arrow.container
+                a.header__back-link(href= url)
+        when 'one title'
+            header.header.header_one-title.container
+                a.header__back-link(href= url)
+                .header__title-section
+                    h1.header__title-main= title
+        when 'two titles'
+            header.header.header_two-titles.container
+                a.header__back-link(href= url)
+                .header__title-section
+                    h1.header__title-main= title
+                    h2.header__title-second= secondTitle
+                .header__run-distance= distance
+        when 'person result'
+            header.header.header_person-result.container
+                a.header__back-link(href= url)
+                .header__title-section
+                    h1.header__title-main= title
+                + run-result('person', '35', '01:24:31', '21065', 'Маргарита Захаржевська', 'жін', '1993')
+                .header__run-distance= distance

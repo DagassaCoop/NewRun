@@ -1,0 +1,30 @@
+include ../../includes/header
+include ../../includes/nav-menu
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        title Personal Completed Runs
+    body.run-person-result
+        + header('person result', './run-results.html', 'Результати забігу', '', 'Три медведя эстафета 10 км')
+        main.main
+            .container
+                .main__content
+                    .main__content-box
+                        p.main__content-title Контрольна точка
+                        p.main__content-item 8,4 км
+                        p.main__content-item 16,8 км
+                        p.main__content-item 25,2 км
+                        p.main__content-item 33,6 км
+                        p.main__content-item 42 км
+                    .main__content-box
+                        p.main__content-title Час
+                        p.main__content-item 01:24:31
+                        p.main__content-item 01:24:31
+                        p.main__content-item 01:24:31
+                        p.main__content-item 01:24:31
+                        p.main__content-item 01:24:31
+        footer.footer
+            + nav-menu('qr')

@@ -1,0 +1,10 @@
+mixin completed-run (location, date, description, distance ,time)
+    .run-info
+        .run-info__content
+            p.run-info__content-location= location
+            p.run-info__content-date= date
+            p.run-info__content-description= description
+            p.run-info__content-distance-text Відстань:
+            p.run-info__content-time= 'Час: '
+                strong= time
+        a.run-info__link(href='./run-results.html')= distance

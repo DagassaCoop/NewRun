@@ -1,0 +1,8 @@
+mixin future-run (location, date, description, distance)
+    .run-info
+        .run-info__content
+            p.run-info__content-location= location
+            p.run-info__content-date= date
+            p.run-info__content-description= description
+            p.run-info__content-distance-text Відстань:
+        a.run-info__link(href='')= distance

@@ -1,0 +1,30 @@
+mixin nav-menu-element (type, active)
+    if active === true
+        - activeClass = " active"
+    else
+        - activeClass = ''
+    case type
+        when "home"
+            - title= 'Головна'
+            - classes= "nav-menu__element_home" + activeClass
+        when "settings"
+            - title= "Налаштування"
+            - classes= "nav-menu__element_settings" + activeClass
+        when "account"
+            - title= "Аккаунт"
+            - classes= "nav-menu__element_account" + activeClass
+        when "qr"
+            - title= "QR коде"
+            - classes= "nav-menu__element_qr" + activeClass
+    .nav-menu__element(class= classes)
+        .nav-menu__element-content
+            .nav-menu__element-content-img
+        .nav-menu__element-content-active
+            .nav-menu__element-content-active-img-box
+                .nav-menu__element-content-active-img
+                    svg(xmlns='http://www.w3.org/2000/svg' viewbox='2 1 7 7' class='nav-menu__element-content-active-img-svg-left')
+                        path(d='M 2 8 C 7 6 6 5 9 1 L 9 8 Z' fill='#ffffff')
+                    svg(xmlns='http://www.w3.org/2000/svg' viewbox='-7 1 7 7' class='nav-menu__element-content-active-img-svg-right')
+                        path(d='M 0 8 C -5 6 -4 5 -7 1 L -7 8 Z' fill='#ffffff')
+
+            p.nav-menu__element-content-active-title= title

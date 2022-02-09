@@ -1,0 +1,22 @@
+.start-nav {
+  margin: 200px auto;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__button {
+    outline: none;
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    margin: 10px 0;
+
+    &-link {
+      color: #000000;
+      text-decoration: none;
+      &:hover {
+        color: #4776ed;
+      }
+    }
+  }
+}
