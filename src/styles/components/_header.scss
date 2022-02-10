@@ -7,7 +7,7 @@
     width: 24px;
     height: 24px;
     margin: 20px 0 10px;
-    background-image: url(@/assets/arrow-back-link.png);
+    background-image: url(@/assets/components/header/arrow-back-link.png);
     position: relative;
     z-index: 1;
 
@@ -129,10 +129,22 @@
     width: 100%;
     padding-top: 20px;
     background-size: cover;
-    background-image: url(@/assets/personalAccount/header-bg.png);
+    background-image: url(@/assets/components/header/header-bg.png);
     .header__back-link {
       margin-top: 0;
     }
+  }
+
+  &_main {
+    background-color: #000000;
+    color: #ffffff;
+    height: 65px;
+    padding: 12px 0;
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 20px 20px;
+    z-index: 2;
+    margin-bottom: -20px;
   }
 
 }

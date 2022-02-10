@@ -4,12 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 
-const PAGES_DIR_PA = `${path.join(__dirname, 'src')}/pug/pages/personalAccount/`
-// const PAGES_DIR_Team = `${path.join(__dirname, 'src').src}/pug/pages/`
-// const PAGES_DIR_App = `${path.join(__dirname, 'src').src}/pug/pages/`
-const PAGES_PA = fs.readdirSync(PAGES_DIR_PA).filter(fileName => fileName.endsWith('.pug'))
-// const PAGES_Team = fs.readdirSync(PAGES_DIR/).filter(fileName => fileName.endsWith('.pug'))
-// const PAGES_App = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+const PAGES_DIR_H = `${path.join(__dirname, 'src')}/pug/pages/home/`
+const PAGES_DIR_S = `${path.join(__dirname, 'src')}/pug/pages/settings/`
+const PAGES_DIR_A = `${path.join(__dirname, 'src')}/pug/pages/account/`
+const PAGES_DIR_QR = `${path.join(__dirname, 'src')}/pug/pages/qrCode/`
+const PAGES_H = fs.readdirSync(PAGES_DIR_H).filter(fileName => fileName.endsWith('.pug'))
+const PAGES_S = fs.readdirSync(PAGES_DIR_S).filter(fileName => fileName.endsWith('.pug'))
+const PAGES_A = fs.readdirSync(PAGES_DIR_A).filter(fileName => fileName.endsWith('.pug'))
+const PAGES_QR = fs.readdirSync(PAGES_DIR_QR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -45,9 +47,21 @@ module.exports = {
                 minify: false
             }
         ),
-        ...PAGES_PA.map(page => new HtmlWebpackPlugin ({
-            template: `${PAGES_DIR_PA}/${page}`,
-            filename: `./personalAccount/${page.replace(/\.pug/,'.html')}`
+        ...PAGES_H.map(page => new HtmlWebpackPlugin ({
+            template: `${PAGES_DIR_H}/${page}`,
+            filename: `./home/${page.replace(/\.pug/,'.html')}`
+        })),
+        ...PAGES_S.map(page => new HtmlWebpackPlugin ({
+            template: `${PAGES_DIR_S}/${page}`,
+            filename: `./settings/${page.replace(/\.pug/,'.html')}`
+        })),
+        ...PAGES_A.map(page => new HtmlWebpackPlugin ({
+            template: `${PAGES_DIR_A}/${page}`,
+            filename: `./account/${page.replace(/\.pug/,'.html')}`
+        })),
+        ...PAGES_QR.map(page => new HtmlWebpackPlugin ({
+            template: `${PAGES_DIR_QR}/${page}`,
+            filename: `./qrCode/${page.replace(/\.pug/,'.html')}`
         })),
         new CleanWebpackPlugin()
     ],

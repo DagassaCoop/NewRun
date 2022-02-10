@@ -9,11 +9,10 @@ html
         meta(http-equiv='X-UA-Compatible' content='ie=edge')
         title Майбутні забіги
     body.future-runs
-        + header('one title', './personal-account.html', 'Реєстрації на майбутні забіги')
+        + header('one title', '../index.html', 'Реєстрації на майбутні забіги')
         main.main
             .container
-                .main__info
-                    .main__info-date Сьогодні 11 листопада
+                include ../../includes/search-box
                 .main__content
                     + future-run('Львів', '05.09.2021', 'Poltava Nova poshta halfmarathon', 'Три медведя эстафета 10 км')
                     + future-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon', '42 км')

@@ -1,4 +1,5 @@
 include ../utils/run-result
+include ./search-box
 mixin header(type, url, title, secondTitle, distance)
     case type
         when 'arrow'
@@ -33,3 +34,7 @@ mixin header(type, url, title, secondTitle, distance)
                     p.header__run-info-date 7.11.2022 р.
                     p.header__run-info-start 09:00
                     p.header__run-info-location Вул. Городоцька 10
+        when 'main'
+            header.header.header_main
+                .container
+                    + search-box('white')

@@ -9,11 +9,10 @@ html
         meta(http-equiv='X-UA-Compatible' content='ie=edge')
         title Мої побажання
     body.wish-runs
-        + header('one title', './personal-account.html', 'Мої побажання')
+        + header('one title', '../index.html', 'Мої побажання')
         main.main
             .container
-                .main__info
-                    .main__info-date Сьогодні 11 листопада
+                include ../../includes/search-box
                 .main__content
                     + wish-run('Львів', '05.09.2021', 'Poltava Nova poshta halfmarathon')
                     + wish-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon')

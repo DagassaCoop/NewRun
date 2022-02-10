@@ -1,6 +1,7 @@
 include ../../includes/header
 include ../../includes/nav-menu
 include ../../utils/completed-run
+include ../../includes/search-box
 doctype
 html
     head
@@ -9,11 +10,10 @@ html
         meta(http-equiv='X-UA-Compatible' content='ie=edge')
         title Personal Completed Runs
     body.completed-runs
-        + header('one title', './personal-account.html', 'Минулі забіги')
+        + header('one title', '../index.html', 'Минулі забіги')
         main.main
             .container
-                .main__info
-                    .main__info-date Сьогодні 11 листопада
+                + search-box('grey')
                 .main__content
                     + completed-run('Львів', '05.09.2021', 'Poltava Nova poshta halfmarathon', 'Три медведя эстафета 10 км', '09:20:06')
                     + completed-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon', '42 км', '09:20:06')

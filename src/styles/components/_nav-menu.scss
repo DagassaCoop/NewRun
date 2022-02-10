@@ -102,37 +102,37 @@
 
     &_home {
       .nav-menu__element-content-img {
-        background-image: url(@/assets/navMenu/home.png);
+        background-image: url(@/assets/components/navMenu/home.png);
       }
       .nav-menu__element-content-active-img {
-        background-image: url(@/assets/navMenu/home-active.png);
+        background-image: url(@/assets/components/navMenu/home-active.png);
       }
     }
 
     &_settings {
       .nav-menu__element-content-img {
-        background-image: url(@/assets/navMenu/settings.png);
+        background-image: url(@/assets/components/navMenu/settings.png);
       }
       .nav-menu__element-content-active-img {
-        background-image: url(@/assets/navMenu/settings-active.png);
+        background-image: url(@/assets/components/navMenu/settings-active.png);
       }
     }
 
     &_account {
       .nav-menu__element-content-img {
-        background-image: url(@/assets/navMenu/account.png);
+        background-image: url(@/assets/components/navMenu/account.png);
       }
       .nav-menu__element-content-active-img {
-        background-image: url(@/assets/navMenu/account-active.png);
+        background-image: url(@/assets/components/navMenu/account-active.png);
       }
     }
 
     &_qr {
       .nav-menu__element-content-img {
-        background-image: url(@/assets/navMenu/qr.png);
+        background-image: url(@/assets/components/navMenu/qr.png);
       }
       .nav-menu__element-content-active-img {
-        background-image: url(@/assets/navMenu/qr-active.png);
+        background-image: url(@/assets/components/navMenu/qr-active.png);
       }
     }
 

@@ -2,14 +2,15 @@
 @import "fonts";
 
 @import 'pages/start-nav';
-@import "pages/personalAccount/personal-account";
-@import "pages/personalAccount/completed-runs";
-@import "pages/personalAccount/completed-run-results";
-@import "pages/personalAccount/completed-run-person-result";
-@import "pages/personalAccount/future-runs";
-@import "pages/personalAccount/future-run-info";
-@import "pages/personalAccount/wish-runs";
-@import "pages/personalAccount/wish-run-info";
+@import "pages/home/main-page";
+@import "pages/home/completed-runs";
+@import "pages/home/future-runs";
+@import "pages/home/wish-runs";
+@import "pages/account/personal-account";
+@import "pages/qrCode/completed-run-results";
+@import "pages/qrCode/completed-run-person-result";
+@import "pages/qrCode/future-run-info";
+@import "pages/qrCode/wish-run-info";
 
 @import "components/header";
 @import 'components/nav-menu';
@@ -18,6 +19,7 @@
 @import "components/run-info-link";
 @import "components/future-run-member";
 @import "components/button";
+@import "components/seach-box";
 
 html {
   // Тут стили для имитации мобильного устройства
