@@ -1,0 +1,27 @@
+.red-points {
+  display: flex;
+  width: 58px;
+  height: 10px;
+  margin: auto;
+  &__item {
+    width: 10px;
+    height: 100%;
+    border-radius: 100%;
+    background: #F63E40;
+    opacity: 0.3;
+
+    &:first-child {
+      margin-right: 5px;
+    }
+
+    &:last-child {
+      margin-left: 5px;
+    }
+
+    &_active {
+      opacity: 1;
+      width: 28px;
+      border-radius: 5px;
+    }
+  }
+}

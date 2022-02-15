@@ -1,5 +1,7 @@
 include ../../includes/header
 include ../../includes/nav-menu
+include ../../includes/run-info-link
+include ../../utils/button
 doctype
 html
     head
@@ -10,6 +12,31 @@ html
     body.main-page
         + header('main')
         main.main
+            .container
+                .main__account-info
+                    .main__account-info-statistics
+                        .main__account-info-statistics-title-box
+                            p.main__account-info-statistics-title Мої забіги
+                            p.main__account-info-statistics-title Загальна відстань
+                            p.main__account-info-statistics-title Наступний старт
+                        .main__account-info-statistics-value-box
+                            p.main__account-info-statistics-value 3
+                            p.main__account-info-statistics-value 40 км
+                            p.main__account-info-statistics-value 11.11.2022
+                        .main__account-info-statistics-description
+                            p.main__account-info-statistics-description-title Poltava Nova poshta halfmarathon halfmarathon
+                            p.main__account-info-statistics-description-value 42 км
+                    .main__account-info-link
+                        .main__account-info-link-img-box
+                            .main__account-info-link-img
+                include ../../includes/red-points
+                .main__link-box
+                    + run-info-link('starts calendar')
+                    + run-info-link('statistics')
+                    + run-info-link('runs results')
+                    + run-info-link('event list')
+                    + button('Мій QR-код', 'red', true)
+
 
         footer.footer
             + nav-menu('home')

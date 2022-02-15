@@ -1,3 +1,11 @@
-mixin search-box(type)
-    .search-box(class= `search-box_${type}`)
-        .search-box__info-date Сьогодні 11 листопада
+mixin search-box(type, color)
+    case type
+        when 'only search'
+            .search-box(class= `search-box_${color}`)
+                .search-box__search
+                .search-box__info-date Сьогодні 11 листопада
+        when 'search and filter'
+            .search-box.search-box_filter(class= `search-box_${color}`)
+                .search-box__filter
+                .search-box__search
+                .search-box__info-date Сьогодні 11 листопада

@@ -1,10 +1,27 @@
 .button {
   width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   outline: none;
   padding: 15px 0;
   border-radius: 150px;
   font-family: "SF Pro Display", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+
+  &__img {
+    background-image: url(@/assets/components/button/qr-code.png);
+    width: 21px;
+    height: 21px;
+  }
+
+  &__text {
+    height: max-content;
+    margin-left: 14px;
+  }
 
   &.white {
     color: #000000;
@@ -15,4 +32,6 @@
     color: #ffffff;
     background-color: #E20020;
   }
+
+
 }

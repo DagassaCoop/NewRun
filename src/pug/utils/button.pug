@@ -1,2 +1,7 @@
-mixin button(text, color)
-    button.button(class= color)= text
+mixin button(text, color, qr_code_status)
+    if (qr_code_status === true)
+        button.button(class= color)
+            .button__img
+            p.button__text= text
+    else
+        button.button(class= color)= text

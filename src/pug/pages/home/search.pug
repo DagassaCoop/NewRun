@@ -1,0 +1,52 @@
+include ../../includes/nav-menu
+include ../../utils/button-distance
+include ../../utils/button
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        title Main Page
+    body.search
+        main.main
+            .container
+                .main__content
+                    .main__content-exit
+                    h1.main__content-title Пошук
+                    .main__location-box
+                        .main__location-city
+                            .main__location-flag.main__location-flag_active
+                            .main__location-title Місто
+                            .main__location-city-input-box
+                                input.main__location-city-input(placeholder='Харків')
+                        .main__location-all
+                            .main__location-flag
+                            .main__location-title Вся Україна
+                    .main__distance-box
+                        + distance('42 км')
+                        + distance('21 км')
+                        + distance('10 км')
+                        + distance('5 км')
+                        + distance('Забег-эстафета 3*1 км Три Медведя', 'distance_small')
+                        + distance('Все забегти', 'distance_white')
+                    .main__period-box
+                        .main__period-title Період проведення:
+                        .main__period-block
+                            p.main__period-text з
+                            .main__period-date
+                                .main__period-date-text 3 листопада 2021
+                                .main__period-date-img
+                        .main__period-block
+                            p.main__period-text по
+                            .main__period-date
+                                .main__period-date-text 3 листопада 2022
+                                .main__period-date-img
+                    .main__run-type-box
+                        p.main__run-type індивідуальний забіг
+                        .main__run-type-checkbox.main__run-type-checkbox_right
+                            .main__run-type-checkbox-point
+                        p.main__run-type-doptype естафєта
+                    + button('Пошук', 'red')
+        footer.footer
+            + nav-menu('home')

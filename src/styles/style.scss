@@ -3,9 +3,15 @@
 
 @import 'pages/start-nav';
 @import "pages/home/main-page";
-@import "pages/home/completed-runs";
-@import "pages/home/future-runs";
-@import "pages/home/wish-runs";
+@import "pages/home/completed-runs_account";
+@import "pages/home/future-runs_account";
+@import "pages/home/wish-runs_account";
+@import "pages/home/completed-runs_main";
+@import "pages/home/wish-runs_list";
+@import "pages/home/wish-runs_calendar";
+@import "pages/home/wish-run-info_distance-select";
+@import "pages/home/regulations";
+@import "pages/home/search";
 @import "pages/account/personal-account";
 @import "pages/qrCode/completed-run-results";
 @import "pages/qrCode/completed-run-person-result";
@@ -20,6 +26,8 @@
 @import "components/future-run-member";
 @import "components/button";
 @import "components/seach-box";
+@import "components/red-points";
+@import "components/button-distance";
 
 html {
   // Тут стили для имитации мобильного устройства

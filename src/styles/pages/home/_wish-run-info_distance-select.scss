@@ -1,0 +1,36 @@
+.wish-run-info_distance-select {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+
+  &__scroll {
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+  }
+
+  .header__title-section {
+    width: 80%;
+    margin: auto;
+  }
+
+  .main {
+    height: auto;
+    min-height: calc(100% - 380px);
+    max-height: max-content;
+    position: relative;
+    padding: 20px 0 40px;
+
+    &__distance-box {
+      width: 100%;
+      &-title {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        line-height: 19px;
+        color: #939393;
+        margin-bottom: 42px;
+      }
+    }
+  }
+
+}

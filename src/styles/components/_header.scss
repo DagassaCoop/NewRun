@@ -1,6 +1,7 @@
 .header {
   width: calc(100% - 30px);
   position: relative;
+  height: 35px;
   &__back-link {
     display: block;
     background-size: cover;
@@ -10,7 +11,18 @@
     background-image: url(@/assets/components/header/arrow-back-link.png);
     position: relative;
     z-index: 1;
+  }
 
+  &__calendar {
+    width: 21px;
+    height: 21px;
+    margin: 20px 0 10px;
+    background-size: cover;
+    background-image: url(@/assets/components/header/calendar.png);
+    &_off {
+      background-image: url(@/assets/components/header/calendar_off.png);
+      height: 15px;
+    }
   }
 
   &__title {
@@ -41,7 +53,7 @@
     bottom: -30px;
     right: -15px;
     background-color: rgba(246, 62, 64, 1);
-    border-radius: 10px 0px 0px 0px;
+    border-radius: 10px 0 0 0;
 
     color: #ffffff;
     font-weight: 700;
@@ -94,8 +106,29 @@
     }
   }
 
-  &_arrow {
-    height: 35px;
+  &__description {
+    width: 100%;
+    &-title {
+      color: #939393;
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 16px;
+    }
+    &-text {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+
+  &_calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .header__title-section {
+      height: 100%;
+    }
   }
 
   &_one-title {
@@ -147,4 +180,30 @@
     margin-bottom: -20px;
   }
 
+  &_card-description {
+    position: relative;
+    background-size: cover;
+    background-image: url(@/assets/components/header/header-bg.png);
+    z-index: 1;
+    height: 400px;
+    width: 100%;
+    margin-bottom: -20px;
+    color: #ffffff;
+
+    .container {
+      height: 100%;
+      width: 100%;
+      padding: 20px 15px 0 15px;
+      margin: 0;
+      background-color: rgba(0,0,0, 0.6);
+    }
+    .header__back-link {
+      margin-top: 0;
+    }
+
+    .header__title-section {
+      margin-bottom: 22px;
+    }
+
+  }
 }

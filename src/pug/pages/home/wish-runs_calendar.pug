@@ -1,0 +1,60 @@
+include ../../includes/header
+include ../../includes/nav-menu
+include ../../utils/wish-run
+include ../../includes/search-box
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        title Мої побажання
+    body.wish-runs_calendar
+        + header('one title calendar_off', '../index.html', 'Всі цьогорічні бігові івенти')
+        main.main
+            .container
+                + search-box('only search','grey')
+                .main__calendar
+                    .main__calendar-nav
+                        p.main__calendar-nav-title Листопад 2021
+                        .main__calendar-nav-button-box
+                            a.main__calendar-nav-button.main__calendar-nav-button_prev(href= '')
+                            a.main__calendar-nav-button.main__calendar-nav-button_next(href= '')
+                    .main__calendar-week
+                        p.main__calendar-week-day-title Пн
+                        p.main__calendar-week-day-title Вт
+                        p.main__calendar-week-day-title Ср
+                        p.main__calendar-week-day-title Чт
+                        p.main__calendar-week-day-title Пт
+                        p.main__calendar-week-day-title Сб
+                        p.main__calendar-week-day-title Вс
+                    .main__calendar-number-box
+                        - start= 3;
+                        - i= 1;
+                        - all= 31 + start;
+                        while start > 0
+                            .main__calendar-number
+                            - start--;
+                        while i < 32
+                            - classes= '';
+                            case i
+                                when 8
+                                    - classes= 'main__calendar-number_focus'
+                                when 10
+                                    - classes= 'main__calendar-number_event'
+                                when 17
+                                    - classes= 'main__calendar-number_event'
+                                when 24
+                                    - classes= 'main__calendar-number_event'
+                            .main__calendar-number(class= classes)
+                                p.main__calendar-number-text= i++
+                        while all < 35
+                            .main__calendar-number
+                            - all++;
+                .main__content
+                    + wish-run('Львів', '05.09.2021', 'Poltava Nova poshta halfmarathon')
+                    + wish-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon')
+                    + wish-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon')
+                    + wish-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon')
+        footer.footer
+            + nav-menu('home')

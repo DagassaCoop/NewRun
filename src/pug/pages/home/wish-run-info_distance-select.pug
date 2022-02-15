@@ -1,0 +1,24 @@
+include ../../includes/header
+include ../../includes/nav-menu
+include ../../utils/button-distance
+doctype
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        title Main Page
+    body.wish-run-info_distance-select
+        .wish-run-info_distance-select__scroll
+            + header('card description', '../home/wish-runs_list.html', 'Lviv Nova Poshta Marathon')
+            main.main
+                .container
+                    .main__distance-box-title Доступні дистанції
+                    .main__distance-box
+                        + distance('42 км')
+                        + distance('21 км')
+                        + distance('10 км')
+                        + distance('5 км')
+                        + distance('Забег-эстафета 3*1 км Три Медведя', 'distance_small')
+        footer.footer
+            + nav-menu('home')

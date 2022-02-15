@@ -1,6 +1,7 @@
 include ../../includes/header
 include ../../includes/nav-menu
 include ../../utils/future-run
+include ../../includes/search-box
 doctype
 html
     head
@@ -8,11 +9,11 @@ html
         meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
         meta(http-equiv='X-UA-Compatible' content='ie=edge')
         title Майбутні забіги
-    body.future-runs
+    body.future-runs_account
         + header('one title', '../index.html', 'Реєстрації на майбутні забіги')
         main.main
             .container
-                include ../../includes/search-box
+                + search-box('only search','grey')
                 .main__content
                     + future-run('Львів', '05.09.2021', 'Poltava Nova poshta halfmarathon', 'Три медведя эстафета 10 км')
                     + future-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon', '42 км')

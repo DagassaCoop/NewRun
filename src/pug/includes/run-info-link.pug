@@ -24,6 +24,22 @@ mixin run-info-link(type)
             - classes= 'wish-list'
             - text= 'Додати до листа бажань'
             - url = ''
+        when 'starts calendar'
+            - classes= 'starts-calendar'
+            - text= 'Календар стартів'
+            - url = '../home/wish-runs_list.html'
+        when 'statistics'
+            - classes= 'statistics'
+            - text= 'Моя статистика'
+            - url = ''
+        when 'runs results'
+            - classes= 'runs-results'
+            - text= 'Результати забігів'
+            - url = '../home/completed-runs_main.html'
+        when 'event list'
+            - classes= 'event-list'
+            - text= 'Журнал подій'
+            - url = ''
     .run-info-link
         a.run-info-link__logo-box(href= url)
             .run-info-link__logo(class=`run-info-link__logo_${classes}`)

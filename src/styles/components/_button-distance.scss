@@ -1,0 +1,36 @@
+.distance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  height: 70px;
+  background: #E20020;
+  border-radius: 10px;
+  margin: 2px 0;
+
+  font-size: 26px;
+  line-height: 31px;
+  color: #ffffff;
+  font-weight: bold;
+
+  &__text {
+    width: 80%;
+    text-align: center;
+  }
+
+  &_small {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+  }
+
+  &_white {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: normal;
+    color: #000000;
+    border: 1px solid #E20020;
+    background-color: transparent;
+  }
+}

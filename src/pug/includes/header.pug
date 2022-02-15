@@ -5,9 +5,25 @@ mixin header(type, url, title, secondTitle, distance)
         when 'arrow'
             header.header.header_arrow.container
                 a.header__back-link(href= url)
+        when 'arrow calendar'
+            header.header.header_calendar.container
+                a.header__back-link(href= url)
+                .header__calendar
         when 'one title'
             header.header.header_one-title.container
                 a.header__back-link(href= url)
+                .header__title-section
+                    h1.header__title-main= title
+        when 'one title calendar'
+            header.header.header_one-title.header_calendar.container
+                a.header__back-link(href= url)
+                .header__calendar
+                .header__title-section
+                    h1.header__title-main= title
+        when 'one title calendar_off'
+            header.header.header_one-title.header_calendar.container
+                a.header__back-link(href= url)
+                .header__calendar.header__calendar_off
                 .header__title-section
                     h1.header__title-main= title
         when 'two titles'
@@ -37,4 +53,22 @@ mixin header(type, url, title, secondTitle, distance)
         when 'main'
             header.header.header_main
                 .container
-                    + search-box('white')
+                    + search-box('only search' ,'white')
+        when 'card description'
+            header.header.header_card-description
+                .container
+                    a.header__back-link(href= url)
+                    .header__title-section
+                        h1.header__title-main= title
+                    .header__description
+                        p.header__description-title 7 листопада 2021 р.
+                        p.header__description-text
+                        | Nova poshta Lviv Marathon в онлайн форматі!
+                        | Ми будемо бігти в підтримку людей у боротьбі з епідемією.
+                        br
+                        | Об’єднуючись з усіх куточків країни, ми подолаємо разом тисячі кілометрів та фінішуватимемо до мети.
+                        br
+                        br
+                        | Готуй кросівки і побігли — разом ми переможемо!
+                        br
+                        | Вмикай пульс свого життя!

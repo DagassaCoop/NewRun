@@ -1,6 +1,7 @@
 include ../../includes/header
 include ../../includes/nav-menu
 include ../../utils/wish-run
+include ../../includes/search-box
 doctype
 html
     head
@@ -8,11 +9,12 @@ html
         meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
         meta(http-equiv='X-UA-Compatible' content='ie=edge')
         title Мої побажання
-    body.wish-runs
+    body.wish-runs_account
         + header('one title', '../index.html', 'Мої побажання')
         main.main
             .container
-                include ../../includes/search-box
+
+                + search-box('only search','grey')
                 .main__content
                     + wish-run('Львів', '05.09.2021', 'Poltava Nova poshta halfmarathon')
                     + wish-run('Полтава', '05.09.2021', 'Poltava Nova poshta halfmarathon')

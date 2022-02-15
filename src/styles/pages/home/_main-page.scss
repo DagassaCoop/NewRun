@@ -1,8 +1,112 @@
 .main-page {
 
   .main {
+    overflow: auto;
+    overflow-x: hidden;
     height: calc(100% - 45px - 100px);
     background: linear-gradient(0deg, #E3E5EA, #E3E5EA);
     border-radius: 0;
+
+    &.container {
+      max-height: 100%;
+      overflow-y: scroll;
+    }
+
+    &__account-info {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: calc(100% - 22px);
+      height: 196px;
+      margin: 43px 0 24px 22px;
+      padding: 22px 0 25px 0;
+
+      &-statistics {
+        width: 80%;
+        height: max-content;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 16px;
+        line-height: 19px;
+
+        &-title {
+          &-box {
+            width: max-content;
+            height: 100%;
+          }
+          &:last-child {
+            font-weight: 700;
+            margin-top: 23px;
+          }
+        }
+
+        &-value {
+          &-box {
+            margin-left: 20px;
+            height: 100%;
+          }
+          &:last-child {
+            font-weight: 700;
+            margin-top: 23px;
+          }
+        }
+        &-description {
+          margin-top: 12px;
+          width: 100%;
+          display: flex;
+          font-size: 13px;
+          line-height: 16px;
+          &-title {
+            width: 80%;
+          }
+          &-value {
+            margin-left: 10px;
+          }
+        }
+
+      }
+
+
+
+      &-link {
+        position: absolute;
+        bottom: 0;
+        right: -61px;
+        height: 100%;
+        width: 78px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        background-color: #ffffff;
+        &-img {
+          &-box {
+            width: 35px;
+            height: 35px;
+            margin: 14px 0 0 11px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #32363B;
+            border-radius: 100%;
+          }
+
+          width: 17px;
+          height: 17px;
+          background-size: cover;
+          background-image: url(@/assets/components/navMenu/account-active.png);
+        }
+      }
+    }
+
+    &__link-box {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 93px;
+      .run-info-link {
+        width: 25%;
+      }
+      .button {
+        margin-bottom: 77px;
+      }
+    }
   }
 }
